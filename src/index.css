@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+    /* Texts Colors */
+    --color-text-primary: #FAFAFA;
+    --color-text-secundary: #6D7F93;
+    --color-text-tertiary: #3396FF;
+    --color-primary: 211 100% 50%;
+    --color-secondary: 220 35% 10%;
+    --color-bg: 220 35% 8%;
+    --color-text: 0 0% 100%;
+    --color-accent: 45 100% 50%;
+
+    /* Backgrounds Colors */
+    --color-bg-light: #FAFAFA;
+    --color-bg-dark: #1E2A44;
+    --color-primary: 211 100% 50%;
+
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)];
+  }
+
+   .text-primary {
+    color: hsl(var(--color-text));
+  }
+
+  .text-secondary {
+    color: hsl(var(--color-primary));
+  }
+
+  .bg-primary {
+    background-color: hsl(var(--color-primary));
+  }
+
+  .bg-secondary {
+    background-color: hsl(var(--color-secondary));
+  }
+
+  .bg-accent {
+    background-color: hsl(var(--color-accent));
+  }
+
+  .bg-base {
+    background-color: hsl(var(--color-bg));
+  }
+}
