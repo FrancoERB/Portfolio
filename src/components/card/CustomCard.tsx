@@ -16,7 +16,7 @@ export const CustomCard = ({
   return (
     <div className="relative h-[400px] rounded-3xl overflow-hidden group flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] mx-2">
       <div
-        className="absolute inset-0 bg-cover bg-center scale-110 blur-2xl opacity-60"
+        className="absolute inset-0 bg-cover bg-center scale-110 bg-white/5 blur-md border border-white/20 opacity-60"
         style={{ backgroundImage: `url(${image})` }}
       />
 
@@ -32,7 +32,7 @@ export const CustomCard = ({
             {tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-3 py-1 rounded-full text-xs font-medium bg-[hsl(var(--color-primary))]/10 text-primary border border-[hsl(var(--color-primary))]/20"
+                className="px-3 py-1 rounded-full text-xs font-medium bg-[hsl(var(--color-primary))]/30 text-primary border border-[hsl(var(--color-primary))]/20"
               >
                 {tag}
               </span>
@@ -45,7 +45,7 @@ export const CustomCard = ({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all mt-4"
+            className="inline-flex items-center gap-2 text-text-optional-primary font-medium hover:gap-3 transition-all mt-4"
           >
             Ver proyecto
             <svg

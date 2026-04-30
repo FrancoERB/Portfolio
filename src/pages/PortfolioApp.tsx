@@ -1,19 +1,22 @@
 import { CustomButton } from '../components/button/CustomButton';
-import { CustomCarrousel } from '../components/carrousel/CustomCarrousel';
+import { CustomCarrousel } from '../components/carousel/CustomCarousel';
 import { CustomFooter } from '../components/footer/CustomFooter';
 import SkillBadge from '../components/skillsBadge/SkillBadge';
-import { skillsData } from '../mockData/mockData';
+import { skillsData } from '../data/data';
 export const PortfolioApp = () => {
   return (
     // Hero section//
-    <div className="bg-bg-light flex flex-col h-full w-full items-center justify-start">
+    <div className="bg-bg-dark flex flex-col h-full w-full items-center justify-start">
       <section className="max-w-4xl text-center animate-fade-in gap-2 my-20 mx-auto px-4 pt-20 pb-16 md:pt-32 md:pb-24">
-        <h1 className="text-black text-7xl font-bold my-5">
+        <h1 className="text-primary text-7xl font-bold my-5">
           Hola, soy <span className="text-text-tertiary"> Franco Erben</span>
         </h1>
+        <p className="text-xl font-bold text-text-secundary md:text-2xl text-muted-foreground mb-8 text-balance">
+          Frontend Developer | React & TypeScript
+        </p>
         <p className="text-xl text-text-secundary md:text-2xl text-muted-foreground mb-8 text-balance">
-          Desarrolador Front End apasionado por crear experiencias web
-          excepcionales
+          Desarrollo interfaces modernas, rápidas y escalables enfocadas en
+          experiencia de usuario.
         </p>
         <div className="flex gap-3 w-full justify-center items-center">
           <CustomButton children={'Ver Proyectos'} />
@@ -23,10 +26,10 @@ export const PortfolioApp = () => {
       {/* My proyects section */}
       <section className="py-16 md:py-24 w-full">
         <div className="container mx-auto px-4 mb-12 animate-slide-up">
-          <h2 className="text-4xl text-black md:text-5xl font-bold text-center mb-4 text-foreground">
+          <h2 className="text-4xl text-primary md:text-5xl font-bold text-center mb-4 text-foreground">
             Proyectos Destacados
           </h2>
-          <p className="text-center text-text-secundary text-muted-foreground text-lg">
+          <p className="text-center text-primary text-muted-foreground text-lg">
             Algunos de mis trabajos más recientes
           </p>
         </div>
@@ -35,12 +38,12 @@ export const PortfolioApp = () => {
         </div>
       </section>
       {/* Tecnologies section */}
-      <section className=" w-full bg-bg-light md:py-24">
+      <section className=" w-full bg-bg-dark md:py-24">
         <div className=" mx-auto px-4 text-center animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-black">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">
             Tecnologías
           </h2>
-          <div className="flex  bg-bg-light rounded-4xl flex-wrap gap-4 justify-center max-w-3xl mx-auto">
+          <div className="flex  bg-bg-dark rounded-4xl flex-wrap gap-4 justify-center max-w-3xl mx-auto">
             {skillsData.map((skill, index) => (
               <SkillBadge key={index} name={skill.name} icon={skill.icon} />
             ))}
@@ -50,7 +53,9 @@ export const PortfolioApp = () => {
       {/* Contact Section */}
       <section className="flex flex-col w-full">
         <div className="flex flex-col w-full h-auto justify-center items-center py-16 gap-2">
-          <h2 className="text-5xl text-black font-bold">Trabajamos juntos?</h2>
+          <h2 className="text-5xl text-primary font-bold">
+            Trabajamos juntos?
+          </h2>
           <p className="text-xl text-text-secundary font-semibold">
             Estoy disponible para nuevos proyectos y colaboraciones
           </p>
