@@ -12,7 +12,7 @@
     description: "LibCloud es uno de mis primeros proyectos, ahora con la nueva version actualmente en desarrollo con interfaz actualizada, simplificada y responsive. Migrada cmpletamente a TypeScript",
     image: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800",
     tags: ['React', 'Tailwind CSS', "TypeScript", "ViteTS"],
-    link: "https://taskmaster.example.com"
+    link: "https://libcloud.vercel.app/"
   },
 //   {
 //     title: "RecipeHub — Plataforma de Recetas",

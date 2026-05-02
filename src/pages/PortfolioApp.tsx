@@ -62,7 +62,7 @@ export const PortfolioApp = () => {
         </div>
         <div className="flex gap-3 w-full justify-center items-center">
           <a
-            href="mailto:tu@email.com"
+            href="mailto:francoerben@hotmail.com"
             className="glass-card p-4 rounded-2xl hover:scale-110 transition-transform duration-300"
             aria-label="Email"
           >
@@ -72,7 +72,7 @@ export const PortfolioApp = () => {
             </svg>
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/FrancoERB"
             target="_blank"
             rel="noopener noreferrer"
             className="glass-card p-4 rounded-2xl hover:scale-110 transition-transform duration-300"
@@ -87,7 +87,7 @@ export const PortfolioApp = () => {
             </svg>
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/franco-erben-272042205/"
             target="_blank"
             rel="noopener noreferrer"
             className="glass-card p-4 rounded-2xl hover:scale-110 transition-transform duration-300"
