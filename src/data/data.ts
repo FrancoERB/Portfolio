@@ -17,13 +17,13 @@
     available: true,
   },
   {
-    title: "WeatherNow — Clima en Tiempo Real",
-    description:"App de clima que muestra pronósticos en tiempo real según ubicación del usuario. Integra API meteorológica y diseño responsive.",
+    title: "WeatherNow — En desarrollo..",
+    description:"App de clima que proveerá pronósticos en tiempo real según ubicación del usuario. Integra API meteorológica y diseño responsive.",
     image:"https://images.unsplash.com/photo-1501973801540-537f08ccae7b?w=800",
     tags: ["React", "API", "Weather", "TypeScript"],
     link: "https://weathernow.example.com",
     available: false,
- 
+
   },
   // {
   //   title: "RecipeHub — Plataforma de Recetas",
