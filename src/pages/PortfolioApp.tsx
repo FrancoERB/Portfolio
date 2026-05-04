@@ -1,20 +1,27 @@
 import { CustomButton } from '../components/button/CustomButton';
-import { CustomCarrousel } from '../components/carousel/CustomCarousel';
+import { CustomCard } from '../components/card/CustomCard';
+import { CustomCarrousel } from '../components/carrousel/CustomCarrousel';
 import { CustomFooter } from '../components/footer/CustomFooter';
-import SkillBadge from '../components/skillsBadge/SkillBadge';
-import { skillsData } from '../data/data';
+import ThemeToggle from '../components/ThemeToggle';
+import projects from '../data/data';
+import { techLogos } from '../data/techLogos';
 export const PortfolioApp = () => {
   return (
     // Hero section//
-    <div className="bg-bg-dark flex flex-col h-full w-full items-center justify-start">
+    <div
+      className={`dark:bg-background bg-foreground flex flex-col h-full w-full items-center justify-start`}
+    >
       <section className="max-w-4xl text-center animate-fade-in gap-2 my-20 mx-auto px-4 pt-20 pb-16 md:pt-32 md:pb-24">
-        <h1 className="text-primary text-7xl font-bold my-5">
-          Hola, soy <span className="text-text-tertiary"> Franco Erben</span>
+        <div className="fixed top-6 right-6 z-50">
+          <ThemeToggle />
+        </div>
+        <h1 className={`dark:text-primary text-dark text-7xl font-bold my-5`}>
+          Hola, soy <span className="text-secondary"> Franco Erben</span>
         </h1>
         <p className="text-xl font-bold text-text-secundary md:text-2xl text-muted-foreground mb-8 text-balance">
           Frontend Developer | React & TypeScript
         </p>
-        <p className="text-xl text-text-secundary md:text-2xl text-muted-foreground mb-8 text-balance">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-balance">
           Desarrollo interfaces modernas, rápidas y escalables enfocadas en
           experiencia de usuario.
         </p>
@@ -23,40 +30,59 @@ export const PortfolioApp = () => {
           <CustomButton children={'Contactar'} />
         </div>
       </section>
-      {/* My proyects section */}
-      <section className="py-16 md:py-24 w-full">
-        <div className="container mx-auto px-4 mb-12 animate-slide-up">
-          <h2 className="text-4xl text-primary md:text-5xl font-bold text-center mb-4 text-foreground">
-            Proyectos Destacados
-          </h2>
-          <p className="text-center text-primary text-muted-foreground text-lg">
-            Algunos de mis trabajos más recientes
-          </p>
-        </div>
-        <div className="w-full px-2 md:px-8">
-          <CustomCarrousel />
-        </div>
-      </section>
       {/* Tecnologies section */}
-      <section className=" w-full bg-bg-dark md:py-24">
-        <div className=" mx-auto px-4 text-center animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">
+      <section className=" w-full mb-11 bg-bg-dark md:py-4">
+        <div className=" mx-auto px-6 text-center animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-14 dark:text-primary text-dark">
             Tecnologías
           </h2>
-          <div className="flex  bg-bg-dark rounded-4xl flex-wrap gap-4 justify-center max-w-3xl mx-auto">
-            {skillsData.map((skill, index) => (
-              <SkillBadge key={index} name={skill.name} icon={skill.icon} />
-            ))}
+          <div className="flex dark:bg-dark bg-primary rounded-4xl flex-wrap gap-1 mx-auto justify-center max-w-4xl">
+            <CustomCarrousel autoPlay={true}>
+              {techLogos.map((tech, index) => (
+                <div
+                  key={index}
+                  className="flex-[0_0_30%] px-2 flex justify-center"
+                >
+                  <img
+                    className="flex w-24 h-24 object-contain mx-6"
+                    src={tech.image}
+                  />
+                </div>
+              ))}
+            </CustomCarrousel>
           </div>
         </div>
       </section>
+      {/* My proyects section */}
+      <section className="py-16 md:py-24 w-full">
+        <div className="container mx-auto px-4 mb-12 animate-slide-up">
+          <h2
+            className={`dark:text-primary text-dark text-4xl md:text-5xl font-bold text-center mb-4 `}
+          >
+            Proyectos Destacados
+          </h2>
+          <p className="text-center text-balance font-bold text-muted-foreground text-xl">
+            Algunos de mis trabajos más recientes
+          </p>
+        </div>
+        <div className=" dark:bg-background bg-foreground w-full px-2 md:px-8">
+          <CustomCarrousel autoPlay={false}>
+            {projects.map((project, index) => (
+              <div key={index} className="flex-[0_0_40%] px-2">
+                <CustomCard {...project} />
+              </div>
+            ))}
+          </CustomCarrousel>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="flex flex-col w-full">
         <div className="flex flex-col w-full h-auto justify-center items-center py-16 gap-2">
-          <h2 className="text-5xl text-primary font-bold">
+          <h2 className="text-5xl dark:text-primary text-dark font-bold">
             Trabajamos juntos?
           </h2>
-          <p className="text-xl text-text-secundary font-semibold">
+          <p className="text-xl text-muted-foreground font-semibold">
             Estoy disponible para nuevos proyectos y colaboraciones
           </p>
         </div>
