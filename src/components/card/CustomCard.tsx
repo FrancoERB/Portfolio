@@ -18,7 +18,7 @@ export const CustomCard = ({
   const isDisabled = !available || !link;
 
   return (
-    <div className="relative glass-card h-[400px] rounded-3xl overflow-hidden group flex-[0_0_90%] md:flex-[0_0_45%] lg:flex-[0_0_30%] mx-2">
+    <div className="relative glass-card h-[400px] rounded-3xl overflow-hidden group flex-[0_0_100%] md:flex-[0_0_45%] lg:flex-[0_0_30%] mx-2">
       <div
         className="absolute inset-0 bg-cover bg-center scale-110 blur-md opacity-60"
         style={{ backgroundImage: `url(${image})` }}

@@ -68,7 +68,10 @@ export const PortfolioApp = () => {
         <div className=" dark:bg-background bg-foreground w-full px-2 md:px-8">
           <CustomCarrousel autoPlay={false}>
             {projects.map((project, index) => (
-              <div key={index} className="flex-[0_0_40%] px-2">
+              <div
+                key={index}
+                className="flex-[0_0_100%] sm:flex-[0_0_80%] md:flex-[0_0_75%] lg:flex-[0_0_40%] px-2"
+              >
                 <CustomCard {...project} />
               </div>
             ))}
@@ -77,16 +80,18 @@ export const PortfolioApp = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="flex flex-col w-full">
-        <div className="flex flex-col w-full h-auto justify-center items-center py-16 gap-2">
+      <section className="flex flex-col w-full items-center">
+        <div className="flex flex-col w-full max-w-3xl justify-center items-center py-16 gap-2 text-center px-4">
           <h2 className="text-5xl dark:text-primary text-dark font-bold">
             Trabajamos juntos?
           </h2>
+
           <p className="text-xl text-muted-foreground font-semibold">
             Estoy disponible para nuevos proyectos y colaboraciones
           </p>
         </div>
-        <div className="flex gap-3 w-full justify-center items-center">
+
+        <div className="flex gap-3 justify-center items-center">
           <a
             href="mailto:francoerben@hotmail.com"
             className="glass-card p-4 rounded-2xl hover:scale-110 transition-transform duration-300"

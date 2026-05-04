@@ -22,15 +22,15 @@ export const CustomCarrousel = ({
   const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
-      align: 'start',
-      dragFree: true,
+      align: 'center',
+      dragFree: false,
     },
     plugins,
   );
   return (
     <div
       ref={emblaRef}
-      className="relative w-screen dark:bg-background bg-primary overflow-hidden"
+      className="relative w-full overflow-hidden dark:bg-background bg-primary px-4"
     >
       <div className="flex -ml-2">{children}</div>
     </div>
