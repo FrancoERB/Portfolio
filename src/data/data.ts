@@ -16,15 +16,18 @@
     link: "https://libcloud.vercel.app/",
     available: true,
   },
-  {
-    title: "WeatherNow — En desarrollo..",
-    description:"App de clima que proveerá pronósticos en tiempo real según ubicación del usuario. Integra API meteorológica y diseño responsive.",
-    image:"https://images.unsplash.com/photo-1501973801540-537f08ccae7b?w=800",
-    tags: ["React", "API", "Weather", "TypeScript"],
-    link: "https://weathernow.example.com",
-    available: false,
 
-  },
+  
+  // MockData
+  // {
+  //   title: "WeatherNow — En desarrollo..",
+  //   description:"App de clima que proveerá pronósticos en tiempo real según ubicación del usuario. Integra API meteorológica y diseño responsive.",
+  //   image:"https://images.unsplash.com/photo-1501973801540-537f08ccae7b?w=800",
+  //   tags: ["React", "API", "Weather", "TypeScript"],
+  //   link: "https://weathernow.example.com",
+  //   available: false,
+
+  // },
   // {
   //   title: "RecipeHub — Plataforma de Recetas",
   //   description: "RecipeHub permite explorar, crear y compartir recetas de cocina. Los usuarios pueden filtrar por ingredientes, dificultad o tiempo de preparación. Desarrollada con Next.js, Tailwind CSS y la API de Spoonacular.",
