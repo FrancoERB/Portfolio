@@ -6,6 +6,9 @@ import ThemeToggle from '../components/ThemeToggle';
 import projects from '../data/data';
 import { techLogos } from '../data/techLogos';
 export const PortfolioApp = () => {
+  const navigateTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     // Hero section//
     <div
@@ -28,19 +31,11 @@ export const PortfolioApp = () => {
         <div className="flex gap-3 w-full justify-center items-center">
           <CustomButton
             children={'Ver Proyectos'}
-            onClick={() =>
-              document
-                .getElementById('projectsId')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
+            onClick={() => navigateTo('projectsId')}
           />
           <CustomButton
             children={'Contactar'}
-            onClick={() =>
-              document
-                .getElementById('contactId')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
+            onClick={() => navigateTo('contactId')}
           />
         </div>
       </section>
