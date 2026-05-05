@@ -26,8 +26,22 @@ export const PortfolioApp = () => {
           experiencia de usuario.
         </p>
         <div className="flex gap-3 w-full justify-center items-center">
-          <CustomButton children={'Ver Proyectos'} />
-          <CustomButton children={'Contactar'} />
+          <CustomButton
+            children={'Ver Proyectos'}
+            onClick={() =>
+              document
+                .getElementById('projectsId')
+                ?.scrollIntoView({ behavior: 'smooth' })
+            }
+          />
+          <CustomButton
+            children={'Contactar'}
+            onClick={() =>
+              document
+                .getElementById('contactId')
+                ?.scrollIntoView({ behavior: 'smooth' })
+            }
+          />
         </div>
       </section>
       {/* Tecnologies section */}
@@ -54,7 +68,7 @@ export const PortfolioApp = () => {
         </div>
       </section>
       {/* My proyects section */}
-      <section className="py-16 md:py-24 w-full">
+      <section id="projectsId" className="py-16 md:py-24 w-full">
         <div className="container mx-auto px-4 mb-12 animate-slide-up">
           <h2
             className={`dark:text-primary text-dark text-4xl md:text-5xl font-bold text-center mb-4 `}
@@ -80,7 +94,7 @@ export const PortfolioApp = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="flex flex-col w-full items-center">
+      <section id="contactId" className="flex flex-col w-full items-center">
         <div className="flex flex-col w-full max-w-3xl justify-center items-center py-16 gap-2 text-center px-4">
           <h2 className="text-5xl dark:text-primary text-dark font-bold">
             Trabajamos juntos?
