@@ -53,7 +53,7 @@ export const PortfolioApp = () => {
                   className="flex-[0_0_30%] px-2 flex justify-center"
                 >
                   <img
-                    className="flex w-24 h-24 object-contain mx-6"
+                    className="flex w-24 h-24 object-contain mx-6 sm:gap-4"
                     src={tech.image}
                   />
                 </div>

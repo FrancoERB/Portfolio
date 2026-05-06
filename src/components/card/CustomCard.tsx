@@ -28,7 +28,7 @@ export const CustomCard = ({
         <div>
           <h3 className="text-2xl font-semibold mb-3 text-dark">{title}</h3>
 
-          <p className="text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-muted-foreground max-h-40 mb-4 overflow-y-auto leading-relaxed">
             {description}
           </p>
 
